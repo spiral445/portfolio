@@ -1,0 +1,724 @@
+@charset "utf-8";
+
+/*
+original css 2023/07
+==========================*/
+
+/*背景パターン＝＝＝＝＝＝＝＝＝＝＝*/
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/background_pattern.png);
+}
+
+/*ヘッダー固定＝＝＝＝＝＝＝＝＝＝＝*/
+#topnav {
+  position: fixed;
+  top: 50;
+  width: 100%;
+  z-index: 10;
+}
+
+/*ヘッダーのロゴ＝＝＝＝＝＝＝＝＝＝＝*/
+.headerBack {
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#headerLogo {
+  width: 150px;
+  padding: 10px;
+}
+
+/*ヘッダーのコンテンツ＝＝＝＝＝＝＝＝＝＝＝*/
+
+#navContents #click {
+  color: greenyellow;
+}
+
+#navContents {
+  background-color: #00ac97;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+}
+
+#navContents li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#navContents a {
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  color: #353535;
+}
+
+
+/*マウスオーバー後のカラー＝＝＝＝＝＝＝＝＝＝＝*/
+#navContents .hover01:hover {
+  color: #fff;
+}
+
+.shadow02 {
+  filter: drop-shadow(3px 3px 2px #808080);
+}
+
+/*タイトル＝＝＝＝＝＝＝＝＝＝＝*/
+h1 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  padding-top: 150px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #00ac97;
+  text-align: center;
+  filter: drop-shadow(1px 1px 0 #808080)
+}
+
+.gradation {
+  background: -webkit-linear-gradient(45deg, #00ac97 0%, #1e50a2 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/*本文中タイトル＝＝＝＝＝＝＝＝＝＝＝*/
+main h2 {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin: 40px 8% 10px 8%;
+  padding: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 2px solid #00ac97;
+  color: #00ac97;
+}
+
+/*本文中キャプション＝＝＝＝＝＝＝＝＝＝＝*/
+h3 {
+  text-align: center;
+  margin: 1.7em;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*navカテゴリー(業種)＝＝＝＝＝＝＝＝＝＝＝*/
+.gyousyu {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+}
+
+.gyousyu li {
+  margin: 10px;
+}
+
+.gyousyu a {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/*マウスオーバー後のカラー＝＝＝＝＝＝＝＝＝＝＝*/
+.hover02:hover {
+  background-color: #808080;
+  color: #fff;
+  filter: drop-shadow(3px 3px 2px #808080)
+}
+
+/*本文指定＝＝＝＝＝＝＝＝＝＝＝*/
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #5f5f5f;
+  line-height: 1.7;
+}
+
+body p {
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: center;
+}
+
+.description {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 5px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.description p {
+  font-size: 14px;
+  color: dimgray;
+  margin: 0 3% 0 3%;
+}
+
+/*画像の設定＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+/*勝手にマルチデバイス対応設定*/
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*影付き設定＝＝＝＝＝＝＝＝＝＝＝*/
+img {
+  filter: drop-shadow(1px 2px 3px #bdbdbd);
+}
+
+#headerLogo {
+  filter: none;
+  ;
+}
+
+/*ダム関係=============================================================*/
+
+/*「下書き」の設定=======================*/
+@keyframes open-keyanime1 {
+
+  /* アニメーションの動き */
+  0% {
+    opacity: 0;
+    /* 完全に透明 */
+  }
+
+  100% {
+    opacity: 1;
+    /* 透明度無し、通常表示 */
+  }
+}
+
+.animation1 {
+  animation-name: open-keyanime1;
+  animation-duration: 5s;
+  /* 5秒間で表示 */
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  /* 1回実行*/
+  z-index: -1;
+}
+
+.dam_sitagaki {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/*=======================下書きの設定*/
+.damImg {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  align-items: center;
+  padding: 10px;
+}
+
+.card_cd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  margin: 10px;
+}
+
+.card_cd img {
+  max-height: 450px;
+}
+
+/*==========================================================ダム関係*/
+
+/*==画像配置の設定〜共通〜=========================================================*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+}
+
+.picture img {
+  padding: 10px;
+}
+
+.card_w200 {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  border: 2px solid #fff;
+}
+
+.card_w200no {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_w300 {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_w500 {
+  width: 500px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_w600 {
+  width: 600px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_w650 {
+  width: 650px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_wmax700 {
+  max-width: 700px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_w800 {
+  width: 800px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_w1000 {
+  width: 1000px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_w1300 {
+  width: 1300px;
+  height: auto;
+  margin: 10px;
+}
+
+.card_normal {
+  margin: 10px;
+}
+
+
+/*=====================================================画像配置の設定〜共通〜======*/
+
+/*=ミルウォーキーズクラブ=========================================================*/
+#set3 {
+  padding-top: 10px;
+}
+
+/*Summerロゴbannerのマウスオーバー設定*/
+/* 画像の親要素のスタイル */
+#sumLogo {
+  display: block;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#sumFover {
+  cursor: pointer;
+  height: auto;
+  margin-inline: auto;
+  margin-top: 20px;
+  position: relative;
+    margin: auto;
+}
+
+/* 画像のスタイル */
+#sumFover img {
+  position: absolute;
+  width: 200px;
+  border-radius: 20px;
+}
+/* 2枚目の画像は最初透明 */
+#sumFover img:last-of-type {
+  opacity: 0;
+  transition: opacity .3s;
+}
+/* hoverすると2枚目の画像が透明じゃなくなる+白フチ */
+#sumFover:hover img {
+  opacity: 1;
+  border: 1px solid #fff;
+}
+
+
+/*フィギュアキャプションセンター設定＝＝＝＝＝＝＝＝＝＝＝
+figcaption {
+  text-align: center;
+  font-size: 12px;
+}
+*/
+
+/*最下位Topへのリンク＝＝＝＝＝＝＝＝＝＝＝*/
+.topLink {
+  font-weight: bold;
+  color: #00ac97;
+  text-align: center;
+  padding: 20px;
+}
+
+.hover03:hover {
+  color: #353535
+}
+
+/*コピーライト＝＝＝＝＝＝＝＝＝＝＝*/
+footer {
+  background-color: #00ac97;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/*個人制作〜KIMAGUREの説明部分==========================*/
+/*sectionの設定*/
+.sec {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: auto;
+  margin-top: 15px;
+  width: 60%;
+  text-align: center;
+}
+
+.sec li {
+  margin: 10px;
+}
+
+.kimagureArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 8% 0 8%;
+}
+
+.kimagure {
+  background-color: rgba(0, 110, 84, 0.1);
+  border: 2px solid rgba(0, 110, 84, 0.5);
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.kimagure p {
+  margin: 3px;
+  text-align: left;
+}
+
+.kimagure ul {
+  width: auto;
+  text-align: center;
+}
+
+.kimagure ul li {
+  margin: 10px;
+}
+
+.kimagure h3 {
+  margin: auto;
+  width: 300px;
+  background: rgba(0, 110, 84, 0.5);
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  padding: 15px 0 15px 0;
+}
+
+/*個人制作(共通)h2文字色==========================*/
+.kozinH2 {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin: 40px 8% 10px 8%;
+  padding: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 2px solid rgba(85, 71, 56, 1);
+  color: rgba(85, 71, 56, 1);
+}
+
+/*個人制作(他共通)説明部分左揃え==========================*/
+.textLeft {
+  text-align: left;
+}
+
+/*個人制作〜コテージHANACYUの説明部分==========================*/
+#cottageArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cottage {
+  background-color: rgba(0, 110, 84, 0.1);
+  border: 2px solid rgba(0, 110, 84, 0.5);
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.cottage p {
+  margin: 3px;
+  text-align: left;
+}
+
+.cottage ul {
+  width: 350px;
+  text-align: center;
+}
+
+.cottage ul li {
+  margin: 10px;
+
+}
+
+.cottage h3 {
+  margin: auto;
+  width: 300px;
+  background: rgba(0, 110, 84, 0.5);
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  padding: 15px 0 15px 0;
+}
+
+.themeColor {
+  background-color: rgba(85, 71, 56, 1);
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  padding: 10px;
+}
+
+.cottageLogo {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+}
+
+.cottageLogo li {
+  margin: 10px;
+}
+
+.cottageLogo01 {
+  background-color: #fff;
+  display: flex;
+  text-align: center;
+  border: 2px solid rgba(85, 71, 56, 1);
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: rgba(85, 71, 56, 1);
+  font-weight: bold;
+  margin: 5px;
+  padding: 10px;
+}
+
+.cottageLogo02 {
+  background-color: #fff;
+  display: flex;
+  text-align: center;
+  border: 2px solid rgba(0, 110, 84, 1);
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: rgba(0, 110, 84, 1);
+  font-weight: bold;
+  margin: 5px;
+  padding: 10px;
+}
+
+/*groupworkページ設定==========================*/
+/*sectionの設定*/
+.sec {
+  padding: 15px;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+/*bannerのマウスオーバー設定*/
+/* 画像の親要素のスタイル */
+.banner {
+  cursor: pointer;
+  height: auto;
+  margin-inline: auto;
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 45vw;
+}
+
+/* 画像のスタイル */
+.banner img {
+  height: auto;
+  left: 0;
+  position: absolute;
+  width: auto;
+}
+
+/* 2枚目の画像は最初透明 */
+.banner img:last-of-type {
+  opacity: 0;
+  transition: opacity .7s;
+}
+
+/* hoverすると2枚目の画像が透明じゃなくなる */
+.banner:hover img {
+  opacity: 1;
+}
+
+
+.groupArea {
+  /*
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  */
+  padding: 10px 15% 0 15%;
+}
+
+.group {
+  background-color: rgba(119, 136, 153, 0.1);
+  border: 2px solid rgba(119, 136, 153, 0.5);
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.group p {
+  margin: 3px;
+  /*
+  text-align: left;
+  */
+}
+
+.group ul {
+  width: auto;
+  text-align: center;
+}
+
+.group ul li {
+  margin: 20px;
+}
+
+.group h3 {
+  margin: auto;
+  max-width: 300px;
+  background: rgba(119, 136, 153, 0.5);
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  padding: 15px 0 15px 0;
+}
+
+
+
+
+/*=======================個人制作〜コテージHANACYUの説明部分===*/
+
+/*ブレイクポイント設定〜スマホ用〜（640px以下に適用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+@media screen and (max-width: 640px) {
+  /*navカテゴリー(業種)
+  .gyousyu {
+    width: 300px;
+    margin: auto;
+    margin-top: 60px;
+  }
+  .gyousyu li {
+    margin-bottom: 10px;
+  }
+  .gyousyu a {
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+  }
+  */
+
+  body {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #5f5f5f;
+    line-height: 1.7;
+  }
+
+  body p {
+    text-align: left;
+  }
+
+  .textCenter {
+    text-align: center;
+  }
+
+  .description p {
+    font-size: 12px;
+    color: dimgray;
+    margin: 0 3% 0 3%;
+  }
+
+  .damImg {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    padding: 10px;
+  }
+
+  /*grupページの設定*/
+
+  /*バナーの下に隠れるのを回避*/
+#groupArea01 {
+  margin-top: 20vw;
+  }
+
+  .sec {
+    padding: 15px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  #secButsudan {
+    margin-top: 50px;
+  }
+
+  /*グループワーク*/
+  .groupArea {
+    padding: 10px 5% 0 5%;
+  }
+
+
+  /*コピーライト＝＝＝＝＝＝＝＝＝＝＝*/
+  footer p {
+    background-color: #00ac97;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+}

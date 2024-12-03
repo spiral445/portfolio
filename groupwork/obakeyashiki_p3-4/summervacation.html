@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/summer.css">
+  <title>summer Vacation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js" charset="utf-8"></script>
+  <!--ポップアップウインドウ==================== -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+    type="text/javascript"></script>
+  <!--パスワード認証====================   -->
+  <script type="text/javascript">
+    function gate() {
+      var UserInput = prompt("パスワードを入力して下さい:", "");
+      location.href = UserInput + ".html";
+    }
+  </script>
+
+</head>
+
+<body>
+  <!--  header Area==================== -->
+  <header>
+    <ul class="headerBack">
+      <li>
+        <a href="summervacation.html">
+        <img src="image/summer.png" alt="企業ロゴ" id="headerLogo">
+        </a>
+      </li>
+    </ul>
+  </header>
+  <!--  a====================header Are -->
+  <!--  Main Area==================== -->
+  <main>
+    <div class="main_title">
+      <img src="image/summer.jpg" alt="title">
+    </div>
+    <section class="sec">
+      <h2>キャッチコピー</h2>
+      <ul>
+        <li>
+          <div class="catch">
+            <p class="catchcopy">
+              フレッシュな発想力と情熱で<br>
+              モノと経験を提供します。
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="sec">
+      <h2>私たちの思い</h2>
+      <ul>
+        <li class="summer">
+          <p>株式会社 Summer Vacation は<br>
+            妥協なく最高峰を目指し、デザインを通じて<br>
+            コミュニケーションを豊かにします。</p>
+        </li>
+        <li id="staffLi">
+          <div class="staff">
+            <img class="staffImg" src="image/staff_01.jpg" alt="チーム画像01">
+            <img class="staffImg" src="image/staff_02.jpg" alt="チーム画像02">
+          </div>
+        </li>
+      </ul>
+    </section>
+<section class="sec">
+      <h2>会社ロゴデザインについて</h2>
+      <ul>
+        <li class="summer">
+          <p>コーポレートカラーにはオレンジとブルーを使用しました。<br>
+          オレンジの反対色であるブルーを配置することで色を引き立たせました。
+        </p>
+      </li>  
+      </ul>
+        <ul class="summerLogo">
+          <li class="summerLogo01">
+            <a>
+              「オレンジ」は喜びがにじみ出る色で、やる気や希望に満ちた、<br>
+              エネルギーと温もりでポジティブな気持ちを表しています。
+            </a>
+          </li>
+          <li class="summerLogo02">
+            <a>
+              「ブルー」は企業には無くてはならない信頼、誠実、開放感、知性などを表しています。
+            </a>
+          </li>
+        </ul>
+  
+      <ul>
+          <li>
+            <p>
+              そして、ロゴマークイメージの「太陽」は陽気で活気にあふれ、<br>
+              キャッチコピーにある、フレッシュな発想力と情熱を表しています。<br>
+              遊び心をわすれない、ウキウキワクワクを追い求めた<br>
+              柔軟性のある会社でありたいという意味を込めています。
+            </p>
+          </li>
+      </ul>
+
+</section>
+
+    <section class="sec">
+      <h2>会社概要</h2>
+      <ul>
+        <li>
+          <p>
+            会社名: 株式会社Summer Vacation<br>
+            住所:〒169-0075<br>
+            東京都新宿区高田馬場3-18-13 サクセス高田馬場ビル 2F　207 号室<br>
+            電話番号:03ｰ6698ｰ8591 ※受付時間 平日10:00 ～ 19:00<br>
+            設立年月日:2023 年6月1日<br>
+            代表取締役: 鳥肌　絶悪・真　零故<br>
+            資本金：500 万円<br>
+            事業内容：イベント企画・提案/ ウェブサイト構築・設計・運営支援<br>
+            ブランディング・ロゴデザインの制作・看板デザインなど<br>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sec">
+      <h2>極秘資料</h2>
+      <ul class="gokuhi">
+        <li>
+          <p>今回のお化け屋敷肝潰し様からの資料提供です。<br>
+            内容は機密事項となっております。<br>
+          (極秘公開パスワード：web202306)</p>
+        </li>
+        <li id="gokuhi01"><img src="image/gokuhi.png" width="300" alt="極秘資料01"></li>
+        <li id="gokuhi02"><img src="image/topsecret.png" width="300" alt="極秘資料02"></li>
+      </ul>
+      <ul id="pass">
+        <li>
+          <p><input type="button" value="パスワードを入力して極秘資料を閲覧" onclick="gate();"></p>
+        </li>
+      </ul>
+    </section>
+
+    <ul id="kimoLogo">
+      <li>
+        <p>肝潰しホーム</p>
+      </li>
+      <li>
+        <a href="../obake.html">
+          <div id="kimoFover">
+            <img src="image/bannerSmall.jpg" alt="Summer Vacationロゴ">
+            <img src="image/bannerSmall2.jpg" alt="ホバー後のSummer Vacationロゴ">
+          </div>
+        </a>
+      </li>
+    </ul>
+    <!--  Topへのリンク============== -->
+    <div class="topLink">
+      <ul>
+        <li>
+          <p>∧</p>
+        </li>
+        <li>
+          <a href="summervacation.html" class="hover03">このページのTOPへ</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <!--  ===============Topへのリンク -->
+  <!--  ====================Main Area -->
+  <!-- Footer Area ==================== -->
+  <footer>
+    <p>© 2023 Summer Vacation</p>
+  </footer>
+  <!-- ==================== Footer Area -->
+</body>
+
+</html>

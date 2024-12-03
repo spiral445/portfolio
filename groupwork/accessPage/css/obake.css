@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/*accessPageStyleSeet/////////////////////////////*/
+
+/*全体の設定////*/
+body{
+  background-color: black;
+  font-family: serif;
+  color: white;
+}
+
+/*ページ内文字の設定*/
+body p {
+  text-align: center;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+/*スライダーの設定/*/
+.Slider p img {
+  text-align: center;
+
+}
+
+.sliderWrap {
+  text-align: center;
+  margin: 50px 50px;
+
+}
+
+
+
+/*ヘッダーの設定*/
+header ul {
+  display: flex;
+  background-image: url(../images/nav.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 180px;
+  justify-content: space-evenly;
+  padding: 1.5% 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+/*ヘッダーリンク:マウスオーバー*/
+header ul li:hover {
+  color: red
+}
+
+/*肝潰しロゴマーク*/
+.main_title img{
+  width:300px;
+  display: block;
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 50px;
+}
+
+/*各セクションのタイトル設定/*/
+h1 {
+  font-family: serif;
+  padding-top: 5vw;
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/*セクションの背景設定//*/
+.naiyou {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: auto;
+  margin-top: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+
+/*チケット料金セクションの設定//*/
+.ticketPrice {
+  font-size: 25px;
+  padding-bottom: 50px;
+  line-height: 40px; 
+}
+
+.chui p {
+  text-align: left;
+}
+
+
+/*営業時間セクションの設定//*/
+.eigyoujikan {
+  margin: 40px 0;
+}
+/*カレンダーの設定///*/
+.ticket {
+  margin-bottom: 20px;
+}
+.calendar {
+  width: 220px;
+  margin: 0 auto;
+  background-color: brown;
+  padding: 10px 10px;
+  margin-bottom: 50px;
+}
+
+.calendarButton {
+  position: relative;
+}
+
+.calendarButton::before {
+  background: url(../images/tegatabutton.png) no-repeat center center / cover #af0404;
+  border: solid 1px #af0404;
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: -65px;
+  border-radius: 28px;
+  height: 50px;
+  width: 50px;
+}
+
+/*カレンダーのボタンの非表示などの設定///*/
+input[type="date"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+input[type="date"]::-webkit-clear-button{
+  -webkit-appearance: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+}
+
+/*マップの設定//*/
+
+.map {
+  padding: 20px;
+}
+.map iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/*注意事項の設定//*/
+
+.attention {
+  color: yellow;
+  background-color: rgba(175,4,4,0.7);
+  padding: 15px;
+  margin: auto;
+  margin-top: 15px;
+  width: 80%;
+  text-align: center;
+}
+.attention p {
+  text-align: left;
+}
+
+/*アクセスセクションの設定//*/
+.access div p {
+  text-align: left;
+}
+
+
+/*最下位Topへのリンク*/
+.topLink {
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*最下位Topへのリンク:マウスオーバー*/
+.hover03:hover {
+  color: white
+}
+
+/*フッターの設定*/
+footer{
+  text-align: center;
+  background-color: darkred;
+  padding: 2% 0;
+  margin-top: 4%;
+  color: #fff;
+}
+
+
+
+
+/*レスポンシブ対応設定（650px以上に適用）＝＝＝＝＝＝＝
+
+/*sectionの設定*/
+@media screen and (min-width: 650px) {
+
+
+  /*セクションの背景設定//*/
+  .naiyou {
+    width: 60%;
+  }
+
+/*全体の設定//*/
+  body p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  h1 {
+    font-family: serif;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+  }
+
+  /*スライダーの設定//*/
+  .sliderWrap {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+
+  /*チケット料金セクションの設定//*/
+  .chui p {
+    text-align: center;
+  }
+
+/*注意事項の設定//*/
+.attention {
+  width: 60%;
+}
+.attention p {
+  text-align: center;
+}
+
+}

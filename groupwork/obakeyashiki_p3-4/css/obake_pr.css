@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+/*ヘッダーの設定*/
+header ul {
+  display: flex;
+  background-image: url(../image/nav.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 180px;
+  justify-content: space-evenly;
+  padding: 1.5% 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+/*ヘッダーリンク:マウスオーバー*/
+header ul li:hover {
+  color: red
+}
+
+/*肝潰しロゴマーク*/
+.main_title img{
+  width:300px;
+  display: block;
+  margin: auto;
+  padding-top: 10%;
+}
+
+/*ページ内文字の設定*/
+body{
+  background-color: black;
+  font-family: serif;
+  color: white;
+}
+
+body p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+h1 {
+  font-family: serif;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 15px;
+  color: red ;
+}
+
+
+/*sectionの設定*/
+.sec {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: auto;
+  margin-top: 15px;
+  width: 60%;
+  text-align: center;
+}
+
+.sec li {
+  margin-top: 20px;
+}
+
+/*勝手にマルチデバイス対応設定*/
+.sec img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*bannerのマウスオーバー設定*/
+/* 画像の親要素のスタイル */
+.banner {
+  cursor: pointer;
+  height: auto;
+  margin-inline: auto;
+  margin-top: 20px;
+  position: relative;
+}
+/* 画像のスタイル */
+.banner img {
+  height: auto;
+  left: 0;
+  position: absolute;
+  width: auto;
+}
+/* 2枚目の画像は最初透明 */
+.banner img:last-of-type {
+  opacity: 0;
+  transition: opacity .7s;
+}
+/* hoverすると2枚目の画像が透明じゃなくなる */
+.banner:hover img {
+  opacity: 1;
+}
+
+/*バナーの下に隠れるのを回避*/
+.sec li.banner02 {
+margin-top: 45vw;
+}
+
+/*おみやげ*/
+.omiya img {
+  margin-top: 35px;
+  transform: rotate(15deg);
+  padding: 30px 0;
+}
+
+/*おみくじの設定*/
+.omikuzi {
+  margin-top: 5vw;
+}
+span {
+  display: block;
+  margin: 5px;
+}
+#wrap {
+  background-color: maroon;
+  width: 650px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 30px;
+  line-height: 40px;
+  color: white;
+}
+#wrap h3 {
+  margin-bottom: 20px;
+}
+/*おみくじ結果*/
+#wrap h3 span {
+  color: black;
+  padding: 0 1em;
+  font-weight: bold;
+}
+/*おみくじボタン*/
+#wrap input[type="button"] {
+  background-color: red;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 35px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+#wrap input[type="button"]:active {
+  background-color: #eee;
+  box-shadow: 0px -1px 3px rgba(0,0,0,0.5);
+}
+
+/*Summerロゴbannerのマウスオーバー設定*/
+/* 画像の親要素のスタイル */
+#sumLogo {
+  display: block;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#sumFover {
+  cursor: pointer;
+  height: auto;
+  margin-inline: auto;
+  margin-top: 20px;
+  position: relative;
+    margin: auto;
+}
+
+/* 画像のスタイル */
+#sumFover img {
+  position: absolute;
+  width: 200px;
+  border-radius: 20px;
+}
+/* 2枚目の画像は最初透明 */
+#sumFover img:last-of-type {
+  opacity: 0;
+  transition: opacity .3s;
+}
+/* hoverすると2枚目の画像が透明じゃなくなる+白フチ */
+#sumFover:hover img {
+  opacity: 1;
+  border: 1px solid #fff;
+}
+
+/*最下位Topへのリンク*/
+.topLink {
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*最下位Topへのリンク:マウスオーバー*/
+.hover03:hover {
+  color: white
+}
+
+/*フッターの設定*/
+footer{
+  text-align: center;
+  background-color: darkred;
+  padding: 2% 0;
+  margin-top: 4%;
+  color: #fff;
+}
+
+/*ブレイクポイント設定〜スマホ用〜（650px以下に適用）＝＝＝＝＝＝＝
+
+/*sectionの設定*/
+@media screen and (max-width: 650px) {
+.sec {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: auto;
+  margin-top: 15px;
+  width: 85%;
+  text-align: center;
+}
+body p {
+  text-align: center;
+  font-size: 14px;
+  line-height: 25px;
+}
+h1 {
+  font-family: serif;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px;
+  color: red ;
+}
+/*おみくじ*/
+#wrap {
+  background-color: maroon;
+  width:400px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+}
+}

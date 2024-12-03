@@ -1,0 +1,411 @@
+@charset "utf-8";
+
+body {
+  background: url(../image/summer_back.jpg) no-repeat center/cover;
+}
+
+/*ヘッダー固定＝＝＝＝＝＝＝＝＝＝＝*/
+header {
+  position: fixed;
+  top: 50;
+  width: 100%;
+  z-index: 10;
+}
+
+/*ヘッダーのロゴ＝＝＝＝＝＝＝＝＝＝＝*/
+.headerBack {
+  background-image: linear-gradient(90deg, rgba(250, 225, 110, 1), rgba(236, 144, 23, 1));
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+#headerLogo {
+  width: 120px;
+  padding: 10px;
+  padding-left: 15%;
+}
+
+/*Top企業ロゴ*/
+.main_title img {
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-bottom: 5vw;
+  border-radius: 50px;
+  box-shadow: 10px 10px 20px 10px #3333ff;
+}
+
+/*ヘッダーの下に隠れるのを回避*/
+main {
+  padding-top: 100px;
+}
+
+/*ページ内文字の設定*/
+body {
+  font-family: sans-serif;
+  color: #333366
+}
+
+body p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+h2 {
+  text-shadow: 3px 3px 4px #333366, -2px -2px 4px #333366;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  padding: 5px;
+  margin: 15px;
+  color: #fff
+}
+
+/*sectionの設定*/
+.sec {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  margin: auto;
+  margin-top: 15px;
+  width: 60%;
+}
+
+.sec li {
+  margin: 10px;
+}
+
+
+/*キャッチコピーアニメーション設定*/
+.catch {
+  width: auto;
+}
+
+.catch p {
+  font-size: 30px;
+  line-height: 50px;
+text-align: center;
+  margin: 20px 0px 20px 10px;
+  color: #fff;
+  position: relative;
+  font-family: arno-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: linear-gradient(20deg,
+      rgb(51, 51, 102, 1) 45%,
+      /*--アニメーション後の文字色--*/
+      #fff 50%,
+      /*--アニメーション中の文字色--*/
+      rgb(119, 136, 153, 0.5) 55%
+      /*--アニメーション前の文字色--*/
+    );
+  background-size: 500% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 8s infinite;
+  /*アニメーションの速さ*/
+}
+
+@keyframes shine {
+
+  /*アニメーションの動きを指定するコード*/
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*勝手にマルチデバイス対応設定*/
+.sec img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*集合写真スライド設定*/
+#staffLi {
+  display: flex;
+  justify-content: center;
+}
+
+.staff {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.staffImg {
+  position: absolute; /*positionを使う場合は必ず位置を指定する(absoluteは好きな場所に貼れる)*/
+  top: 0; /*左上に合わせた*/
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  animation: change-img-anim 10s infinite;
+}
+
+.istaffImg:nth-of-type(1) {
+  animation: change-img-anim-first 10s infinite;
+  animation-delay: 0s;
+}
+
+.staffImg:nth-of-type(2) {
+  animation-delay: 5s;
+}
+
+@keyframes change-img-anim-first {
+  0% {
+    opacity: １;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  /*
+  36% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+  */
+}
+
+@keyframes change-img-anim {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  /*
+  36% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+  */
+}
+
+
+/*ロゴマーク説明部分*/
+.summer p {
+  font-size: 20px;
+  font-family: sans-serif;
+  line-height: 40px;
+}
+
+.summerLogo01 a {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: sans-serif;
+  line-height: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin: 5px;
+  padding: 10px;
+}
+.summerLogo02 a {
+  background-color: dodgerblue;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: sans-serif;
+  line-height: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin: 5px;
+  padding: 10px;
+}
+
+
+#pass {
+  margin-top: 50px;
+  z-index: 5;
+}
+
+#pass li {
+  padding: 8px;
+  text-align: center;
+  background-color: #fff;
+  border: 3px solid orange;
+  border-radius: 10px;
+  color: orange;
+  font-weight: bold;
+}
+
+/*マウスオーバー後のカラー＝＝＝＝＝＝＝＝＝＝＝*/
+#pass li:hover {
+  background-color: orange;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+/*極秘事項のスタンプ*/
+.gokuhi li {
+  display: flex;
+  justify-content: center;
+}
+
+#gokuhi01 {
+  /*width:fit-content;左に寄る*/
+  transform: rotate(30deg);
+  padding: 30px 0;
+}
+
+#gokuhi01 img {
+  width: 200px;
+}
+
+#gokuhi02 {
+  /*width:fit-content;左に寄る*/
+  transform: rotate(-15deg)
+}
+
+#gokuhi02 img {
+  width: 300px;
+  margin-top: -60px;
+  /* 上方向にネガティブマージンを取る */
+}
+
+
+
+/*肝潰しbannerのマウスオーバー設定*/
+/* 画像の親要素のスタイル */
+#kimoLogo {
+  display: block;
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+#kimoFover {
+  cursor: pointer;
+  height: auto;
+  margin-inline: auto;
+  margin-top: 20px;
+  position: relative;
+  margin: auto;
+}
+
+/* 画像のスタイル */
+#kimoFover img {
+  position: absolute;
+  width: 400px;
+  border-radius: 20px;
+}
+
+/* 2枚目の画像は最初透明 */
+#kimoFover img:last-of-type {
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+/* hoverすると2枚目の画像が透明じゃなくなる */
+#kimoFover:hover img {
+  opacity: 1;
+}
+
+/*web202306の設定*/
+.gokuhiLi {
+  display: flex;
+  text-align: center;
+  }
+  .gokuhiLi img {
+    margin: 5px;
+  }
+  
+/*最下位Topへのリンク*/
+.topLink {
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*最下位Topへのリンク:マウスオーバー*/
+.hover03:hover {
+  color: white
+}
+
+/*フッターの設定*/
+footer {
+  text-align: center;
+  background-color: orange;
+  padding: 2% 0;
+  color: #fff;
+}
+
+/*ブレイクポイント設定〜スマホ用〜（650px以下に適用）＝＝＝＝＝＝＝
+/*sectionの設定*/
+@media screen and (max-width: 650px) {
+  .sec {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
+    width: 85%;
+    text-align: center;
+  }
+
+  .catch p {
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  body p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 15px;;
+  }
+
+  .summer p {
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 36px;
+  }
+
+  /*スライド写真のサイズ*/
+  .staff {
+    position: relative;
+    width: 300px;
+height: 300px;
+    /*width: 300px;
+    height: 200px;*/
+  }
+
+}

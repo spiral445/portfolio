@@ -1,0 +1,519 @@
+@charset "utf-8";
+
+/*
+original css 2023/07
+==========================*/
+/*後で消す*/
+
+/*メインロゴアニメーション＝＝＝＝＝＝＝＝＝＝＝*/
+#mainLogo {
+  animation-name: fadeDownAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*画面のアニメーション＝＝＝＝＝＝＝＝＝＝＝*/
+body {
+  animation: fadeIn 5s ease 2s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+/*背景の紙風リピート画像＝＝＝＝＝＝＝＝＝＝＝*/
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/background_pattern.png);
+}
+
+/*Top縄文杉画像＝＝＝＝＝＝＝＝＝＝＝*/
+header {
+  background: url(../images/top/zyoumonsugi.jpg) no-repeat center/cover;
+  height: 100vh;
+  margin-bottom: 30px;
+}
+
+/*ヘッダー固定＝＝＝＝＝＝＝＝＝＝＝*/
+#topnav {
+  position: fixed;
+  top: 50;
+  width: 100%;
+  z-index: 10;
+}
+/*ヘッダーのロゴ＝＝＝＝＝＝＝＝＝＝＝*/
+.headerBack {
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#headerLogo {
+  width: 150px;
+  padding: 10px;
+}
+
+/*ヘッダーのコンテンツ＝＝＝＝＝＝＝＝＝＝＝*/
+
+#click {
+  color: greenyellow;
+}
+
+#navContents {
+  background-color: #00ac97;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+}
+
+#navContents li {
+  margin: 10px;
+}
+
+#navContents a {
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 7px;
+  color: #353535;
+}
+
+/*マウスオーバー後のカラー＝＝＝＝＝＝＝＝＝＝＝*/
+#navContents .hover01:hover {
+  color: #fff;
+}
+
+/*メインロゴ＝＝＝＝＝＝＝＝＝＝＝*/
+#mainLogo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*メインロゴ：スマホ用＝＝＝＝＝＝＝＝＝＝＝*/
+.pc {
+  display: none !important;
+}
+
+.sp {
+  display: block !important;
+}
+
+/*bodyのフォント＝＝＝＝＝＝＝＝＝＝＝*/
+body p {
+  animation: fadeIn 5s ease 2s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #5f5f5f;
+  line-height: 1.7em;
+}
+
+/*bodyテキストのマージン＝＝＝＝＝＝＝＝＝＝＝*/
+body p {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+/*toptext＝＝＝＝＝＝＝＝＝＝＝*/
+.topText p {
+  text-align: center;
+  line-height: 1.75;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+  margin-bottom: 40px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 16px;
+}
+
+#gradation {
+  color: #353535;
+  background: -webkit-linear-gradient(45deg, #00ac97 0%, #1e50a2 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#gradationPc {
+  color: #353535;
+  background: -webkit-linear-gradient(135deg, #00ac97 0%, #1e50a2 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/*toptextのアニメーション＝＝＝＝＝＝＝＝＝＝＝*/
+.topText {
+  animation: 5s fuwafuwa infinite;
+}
+
+@keyframes fuwafuwa {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/*オウム貝のアニメーション＝＝＝＝＝＝＝＝＝＝＝*/
+#oumugai {
+  padding: 20px;
+  transform-origin: center bottom;
+  animation: yurayura 3s linear infinite;
+  width: 100px;
+}
+
+@keyframes yurayura {
+
+  0%,
+  100% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+body main nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*仕事の種類＝＝＝＝＝＝＝＝＝＝＝*/
+body main nav ul li {
+  margin: 10px;
+}
+
+body main nav ul li a {
+  display: block;
+  width: 130px;
+  height: 130px;
+  padding: 50px 0 50px;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #808080;
+  border-radius: 5px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 16px;
+  color: #808080;
+}
+
+
+/*マウスオーバー後のカラー＝＝＝＝＝＝＝＝＝＝＝*/
+.hover02:hover {
+  background-color: #808080;
+  color: #fff;
+  filter: drop-shadow(3px 3px 2px #808080)
+}
+
+/*コンテンツタイトル＝＝＝＝＝＝＝＝＝＝＝*/
+.contents {
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #00ac97;
+  border-bottom: 2px solid #00ac97;
+  margin: 20px auto;
+  padding: 7px;
+  width: 70%;
+  font-family: 'Kulim Park', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 25px;
+  color: #00ac97;
+}
+
+/*影付き設定＝＝＝＝＝＝＝＝＝＝＝*/
+.topText {
+  filter: drop-shadow(5px 5px 1px #bdbdbd);
+}
+
+.shadow {
+  filter: drop-shadow(3px 3px 2px #bdbdbd);
+}
+
+.shadow02 {
+  filter: drop-shadow(3px 3px 2px #808080);
+}
+
+
+/*自己紹介部分画像＝＝＝＝＝＝＝＝＝＝＝*/
+figure {
+  text-align: center;
+  margin: 15px;
+}
+
+#umigame {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.bj {
+  width: 50%;
+  border-radius: 10px;
+}
+
+
+
+/*本文中タイトル＝＝＝＝＝＝＝＝＝＝＝*/
+main h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 3em 0 1.5em;
+  color: #5f5f5f;
+}
+
+/*名前＝＝＝＝＝＝＝＝＝＝＝*/
+.name {
+  text-align: center;
+  letter-spacing: 1.7em;
+  text-indent: 1.7em;
+  font-size: 16px;
+}
+
+/*スキルカテゴリー＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*綺麗に中央に揃わない*/
+/*inline-block_test
+.skil {
+  display: inline-block;
+  padding: 20px;
+  vertical-align: top;
+}
+*/
+
+#skilsArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.skil {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.skil p {
+  margin: 3px;
+}
+
+.skil ul {
+  width: 300px;
+  text-align: center;
+}
+
+.skil ul li {
+  margin: 10px;
+
+}
+
+.skil h3 {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background: #808080;
+  border-radius: 5px;
+  font-family: 'IBM Plex Sans JP', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 26px;
+  color: #fff;
+  padding: 32px 0 32px 0;
+}
+
+/*フォーム＝＝＝＝＝＝＝＝＝＝＝*/
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid #808080;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 5px;
+  padding: 4px 8px;
+}
+
+textarea {
+  height: 148px;
+  margin-bottom: 30px;
+}
+
+.contact {
+  text-align: center;
+}
+
+form p {
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #00ac97;
+  font-size: 20px;
+  font: bold;
+  color: #fff;
+  padding: 18px 80px;
+  border-radius: 5px;
+}
+
+/*通常の背景色＝＝＝＝＝＝＝＝＝＝＝*/
+#submitBtn {
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/*背景色:マウスオーバー＝＝＝＝＝＝＝＝＝＝＝*/
+#submitBtn :hover {
+  background-color: #353535;
+  filter: drop-shadow(3px 3px 2px #808080)
+}
+
+/*最下位Topへのリンク＝＝＝＝＝＝＝＝＝＝＝*/
+.topLink {
+  font-weight: bold;
+  color: #00ac97;
+  text-align: center;
+  padding: 20px;
+}
+
+/*最下位Topへのリンク:マウスオーバー＝＝＝＝＝＝＝＝＝＝＝*/
+.hover03:hover {
+  color: #353535
+}
+
+/*コピーライト＝＝＝＝＝＝＝＝＝＝＝*/
+footer {
+  background-color: #00ac97;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/*ブレイクポイント設定〜PC用〜（640px以上に適用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+@media screen and (min-width: 640px) {
+  body {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #5f5f5f;
+    line-height: 1.7;
+  }
+
+  /*メインロゴ、Toptext~PC用~＝＝＝＝＝＝＝＝＝＝＝*/
+  .pc {
+    display: block !important;
+  }
+
+  .sp {
+    display: none !important;
+  }
+
+  /*bodyテキストのマージン＝＝＝＝＝＝＝＝＝＝＝*/
+  body p {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  /*本文中タイトル＝＝＝＝＝＝＝＝＝＝＝*/
+  main h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    margin: 3em 0 1.5em;
+    color: #5f5f5f;
+  }
+
+  /*オウムガイ・Toptext：PC用＝＝＝＝＝＝＝＝＝＝＝*/
+  #oumugai {
+    padding: 50px;
+    transform-origin: center bottom;
+    animation: yurayura 3s linear infinite;
+    width: 200px;
+  }
+
+  .topText {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #gradationPc {
+    font-size: 20px;
+    line-height: 2.3;
+    text-indent: 0.2em;
+    letter-spacing: 0.2em;
+    font-family: 'Zen Maru Gothic', sans-serif;
+  }
+
+  #navContents a {
+    font-size: 16px;
+    padding: 15px;
+    }
+
+    #umigame {
+      width: 30%;
+    }
+    .bj {
+      width: 30%;
+    }
+
+  body p {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #5f5f5f;
+    line-height: 1.7em;
+  }
+
+  footer p {
+    color: #fff;
+  }
+}
